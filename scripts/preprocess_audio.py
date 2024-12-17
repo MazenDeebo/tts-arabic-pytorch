@@ -86,7 +86,7 @@ for wav_fpath in tqdm(wav_fpaths_test):
     elif wave.shape[1] > original_shape:
       wave = wave[:, :original_shape]  # Truncate the extra samples
 
-    #wave_ = wave[0].cpu().numpy()
+    wave_ = wave[0].cpu().numpy()
     #wave_ = wave_ / np.abs(wave_).max() * 0.999
     #wave_ = librosa.effects.trim(wave_, top_db=23, frame_length=1024, hop_length=256)[0]
     #wave_ = np.append(wave_, [0.]*silence_audio_size)
