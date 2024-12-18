@@ -29,7 +29,9 @@ for line in lines:
     utterance = utterance.replace("a~", "~a") \
                          .replace("i~", "~i") \
                          .replace("u~", "~u") \
-                         .replace(" - ", " ")
+                         .replace(" - ", " ")\
+                         .replace("."," ")\
+                         .replace("?"," ")
     print(utterance)
 
     utterance_arab = text.arabic_to_buckwalter(utterance)
